@@ -33,7 +33,7 @@ def to_string(a, b, c):                                     #"f(x) = A * X^2 + B
         return f"f(x) = {a} * X^2 + {b} * X"
   
 
-def derivation(a, b, c):
+def derivation(a, b, c):                                #hay un lio con los creos 000
     if a != 0 and b != 0 :
         return f"f'(x) = {2a} X + {b}"
     elif a == 0 and b == 0:
@@ -42,4 +42,3 @@ def derivation(a, b, c):
         return f"f'(x) = {b}"
     elif b == 0:
         return f"f'(x) = {2a} X"
-
