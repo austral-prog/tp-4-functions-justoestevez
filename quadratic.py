@@ -1,28 +1,29 @@
+# Replace the "ANSWER HERE" for your answer
+
 def roots(a, b, c):
-    descriminante = (b2 - 4 * a * c)
-    resolvente = (-b + (descriminante)0.5) / (2 * a)
-    resolvente_2 = (-b - (descriminante)0.5)  / (2 * a)
-    if descriminante == 0:
-        r = -b / (2a)
+    discriminante = b**2 - 4 * a * c #la raiz en la discriminante RAICES BIIIIEN
+    if discriminante < 0:
+        return "( )"
+    elif discriminante == 0:
+        r = -b / (2*a)
         return f"({r})"
-    elif descriminante > 0:
-        r1 = resolvente
-        r2 = resolvente_2
+    else:
+        r1 = (-b + discriminante**0.5) / (2*a)
+        r2 = (-b - discriminante**0.5) / (2*a)
         return f"({r1}, {r2})"
-    else: return "( )"
 
 def value_y(a, b, c, x):
-    y = a x2 + b * x + c
-    return y
+    return a * x**2 + b * x + c                          #aX2 + bX + c = 0 ESTE ESTA BIEN
 
-def to_string(a, b, c):
+
+def to_string(a, b, c):                                     #"f(x) = A * X^2 + B * X + C"
     if a != 0 and b != 0 and c != 0:
         return f"f(x) = {a} * X^2 + {b} * X + {c}"
     elif a == 0 and b == 0:
         return f"f(x) = {c}"
     elif a == 0 and c == 0:
         return f"f(x) = {b} * X"
-    elif b ==0 and c == 0:
+    elif b == 0 and c == 0:
         return f"f(x) = {a} * X^2"
     elif a == 0:
         return f"f(x) = {b} * X + {c}"
@@ -30,14 +31,14 @@ def to_string(a, b, c):
         return f"f(x) = {a} * X^2 + {c}"
     elif c == 0:
         return f"f(x) = {a} * X^2 + {b} * X"
+  
 
-
-def derivation(a, b, c):
+def derivation(a, b, c):                                #hay un lio con los creos 000
     if a != 0 and b != 0 :
         return f"f'(x) = {2*a} X + {b}"
-    elif a == 0 and b == 0:
+    elif a == 0 and b == 0 :
         return f"f'(x) = 0"
-    elif a == 0:
+    elif a == 0 :
         return f"f'(x) = {b}"
-    elif b == 0:
-        return f"f'(x) = {2a} X"
+    elif b == 0 :
+        return f"f'(x) = {2*a} X"
