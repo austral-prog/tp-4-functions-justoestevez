@@ -10,9 +10,9 @@ def max_of_two(x, y):
 
 def max_of_three(x, y, z):
     """Given x, y and z, that are 3 numbers, return the biggest number of the three."""
-    if x >= y >= z
+    if x >= y >= z:
         return x
-    elif y >= x >= z
+    elif y >= x >= z:
         return y
     else:
         return z
