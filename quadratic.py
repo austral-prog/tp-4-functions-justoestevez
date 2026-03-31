@@ -3,7 +3,7 @@
 def roots(a, b, c):
     discriminante = b**2 - 4 * a * c #la raiz en la discriminante RAICES
     if discriminante < 0:
-        return "()"
+        return "( )"
     elif discriminante == 0:
         r = -b / (2*a)
         return f"({r})"
@@ -13,12 +13,12 @@ def roots(a, b, c):
         return f"({r1}, {r2})"
 
 def value_y(a, b, c, x):
-    return a * x**2 + b * x + c #aX2 + bX + c = 0
+    return a * x**2 + b * x + c                          #aX2 + bX + c = 0 ESTE ESTA BIEN
 
 
 def to_string(a, b, c):
-    return f"f(x) = {a} * X^2 + {b} * X + {c}" #"f(x) = A * X^2 + B * X + C"
+    return f"f(x) = {a} * X^2 + {b} * X + {c}"           #"f(x) = A * X^2 + B * X + C"
 
 
 def derivation(a, b, c):
-    return f"f'(x) = 2 * {a} * X + {b}"
+    return f"f'(x) = {2*a} * X + {b}"
