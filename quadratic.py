@@ -42,3 +42,4 @@ def derivation(a, b, c):                                #hay un lio con los creo
         return f"f'(x) = {b}"
     elif b == 0 :
         return f"f'(x) = {2*a} X"
+
