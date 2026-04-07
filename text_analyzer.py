@@ -33,8 +33,8 @@ def vowel_percentage(text):
 
     Ejemplo: "hola" tiene 2 vocales de 4 letras → 50.0
     """
-    if len(text) > 0:
-        return round((count_vowels(text) / len(text) * 100), 1)
+    if total_letters(text) > 0:
+        return round((count_vowels(text) / total_letters(text) * 100), 1)
     else:
         return 0,0
 
