@@ -23,7 +23,7 @@ def final_price(price, quantity, discount_pct, tax_pct):
     """
     subtotal = (price * quantity)
     descuento = apply_discount (subtotal, discount_pct)
-    impouesto = apply_tax (descuento, tax_pct)
+    impuesto = apply_tax (descuento, tax_pct)
     return round (impuesto, 2)
 
 def best_deal(price_a, qty_a, disc_a, price_b, qty_b, disc_b, tax_pct):
@@ -39,7 +39,7 @@ def best_deal(price_a, qty_a, disc_a, price_b, qty_b, disc_b, tax_pct):
     
     if A < B:
         return "A"
-    elif B < A:
+    elif A > B:
         return "B"
     elif A == B:
         return "A"
