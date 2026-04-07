@@ -36,7 +36,7 @@ def vowel_percentage(text):
     if total_letters(text) > 0:
         return round((count_vowels(text) / total_letters(text) * 100), 1)
     else:
-        return 0,0
+        return 0.0
 
 
 def analyze_text(text):
@@ -48,5 +48,10 @@ def analyze_text(text):
 
     Ejemplo: analyze_text("hola") → "V:2 C:2 T:4 P:50.0%"
     """
-    return f"V:{count_vowels(text)} C:{count_consonants(text)} T:{total_letters(text)} P:{vowel_percentage(text)}%"
+    v = count_vowels(text)
+    c = count_consonants(text)
+    t = total_letters(text)
+    p = vowel_percentage(text)
+    
+    return f"V:{v} C:{c} T:{t} P:{p}%"
 
